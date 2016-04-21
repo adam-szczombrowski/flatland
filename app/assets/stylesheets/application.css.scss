@@ -16,11 +16,95 @@
 
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
-.ng-invalid.ng-dirty {
-  border-color: #FA787E;
+img{
+    width: 130px;
+    height: auto;
 }
 
-.ng-valid.ng-dirty {
-  border-color: #78FA89;
+body{
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  font-family: Garamond, serif;
+  font-size: 36px;
+}
+
+h2{
+  font-family: Garamond, serif;
+}
+
+.card, .current-card, .empty-card{
+  height: 230px;
+  width: 150px;
+  border: 2px solid hsl(23, 81%, 50%);
+  display: inline-block;
+  border-radius: 10px;
+  margin: 0 2px;
+  vertical-align: middle;
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  padding: 2px;
+  overflow: hidden;
+}
+
+.empty-card{
+  padding-top: 90px;
+}
+
+.card-row{
+  margin: 20px auto;
+}
+
+.card-container{
+  margin: 0 2px;
+  display: inline-block;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.right-arrow, .left-arrow{
+  font-size: 300%;
+  height: 250px;
+  width: 50px;
+  display: inline-block;
+  color: hsl(23, 81%, 50%);
+}
+
+p{
+  font-size: 16px;
+}
+
+.btn-default{
+  background-color: hsl(23, 81%, 50%);
+  border-color: hsl(23, 81%, 50%);
+  color: hsl(170, 37%, 82%);
+}
+
+.btn-default:hover, .btn-default:active, .btn-default:focus{
+  background-color: hsl(23, 97%, 53%);
+  border-color: hsl(23, 97%, 53%);
+  color: hsl(170, 37%, 82%);
+}
+
+left-arrow{
+  position: absolute;
+  left: 20px;
+  top: 100px;
+}
+
+right-arrow{
+  position: absolute;
+  right: 20px;
+  top: 100px;
+}
+
+body{
+  background-color: hsl(185, 54%, 20%);
+  color: hsl(170, 37%, 82%);
 }
