@@ -1,5 +1,5 @@
 (function(){
-  var app = angular.module('timeline',['ngRoute', 'timelineServices', 'timelineDirectives']);
+  var app = angular.module('timeline',['templates','ngRoute', 'timelineServices', 'timelineDirectives']);
 
   app.config(['$routeProvider', Router]);
 
