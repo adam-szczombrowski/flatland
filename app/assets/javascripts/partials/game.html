@@ -1,0 +1,26 @@
+<div class='row'>
+  <top-panel></top-panel>
+</div>
+<div class='row'>
+  <left-arrow></left-arrow>
+  <div class='card-row' ng-repeat="card in cards | limitTo:7:visibleIndex">
+    <div class='card' ng-click="(card.name == undefined) && selectPlace(card.year)">
+      <p>
+        {{ card.name }}
+      </p>
+      <p ng-show="{{card.name != undefined}}">
+        {{ card.year }}
+      </p>
+      <img ng-show="card.image" ng-src="{{ card.image}}" alt="{{ card.name}}" />
+    </div>
+  </div>
+  <right-arrow></right-arrow>
+</div>
+<div class='row'>
+  <div class='card-row'>
+    <div class='card'>
+      {{currentCard.name}}
+      <img ng-show="currentCard.image" ng-src="{{ currentCard.image}}" alt="{{ currentCard.name}}" />
+    </div>
+  </div>
+</div>

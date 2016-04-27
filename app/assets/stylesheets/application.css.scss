@@ -23,11 +23,9 @@ img{
     width: 130px;
     height: auto;
 }
-
 body{
   font-family: Verdana, sans-serif;
 }
-
 h1 {
   font-family: Garamond, serif;
   font-size: 36px;
@@ -35,13 +33,13 @@ h1 {
 
 h2{
   font-family: Garamond, serif;
+  font-weight: bold;
 }
 
 .card, .current-card, .empty-card{
   height: 230px;
   width: 150px;
   border: 2px solid hsl(23, 81%, 50%);
-  display: inline-block;
   border-radius: 10px;
   margin: 0 2px;
   vertical-align: middle;
@@ -51,17 +49,10 @@ h2{
   overflow: hidden;
 }
 
-.empty-card{
-  padding-top: 90px;
-}
-
 .card-row{
-  margin: 20px auto;
-}
-
-.card-container{
-  margin: 0 2px;
+  margin: 10px auto;
   display: inline-block;
+
 }
 
 .text-center{
@@ -72,7 +63,7 @@ h2{
   font-size: 300%;
   height: 250px;
   width: 50px;
-  display: inline-block;
+  /*display: inline-block;*/
   color: hsl(23, 81%, 50%);
 }
 
@@ -84,6 +75,7 @@ p{
   background-color: hsl(23, 81%, 50%);
   border-color: hsl(23, 81%, 50%);
   color: hsl(170, 37%, 82%);
+  margin-bottom: 170px;
 }
 
 .btn-default:hover, .btn-default:active, .btn-default:focus{
@@ -92,12 +84,19 @@ p{
   color: hsl(170, 37%, 82%);
 }
 
+h2 > .correct{
+  color: rgb(57, 131, 32);
+}
+
+.wrong {
+  color: rgb(152, 35, 4);
+}
+
 left-arrow{
   position: absolute;
   left: 20px;
   top: 100px;
 }
-
 right-arrow{
   position: absolute;
   right: 20px;
@@ -107,8 +106,4 @@ right-arrow{
 body{
   background-color: hsl(185, 54%, 20%);
   color: hsl(170, 37%, 82%);
-}
-
-.footer a{
-  color: inherit;
 }
