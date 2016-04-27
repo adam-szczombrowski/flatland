@@ -6,10 +6,10 @@
   function Router($routeProvider){
     $routeProvider.
     when('/', {
-      templateUrl: '/assets/partials/welcome.html'
+      templateUrl: 'welcome.html'
     }).
     when('/game', {
-      templateUrl: '/assets/partials/game.html',
+      templateUrl: 'game.html',
       controller: 'GameController'
     }).
     otherwise({ redirectTo: '/' });
