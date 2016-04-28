@@ -19,6 +19,10 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+
+$orange: hsl(23, 81%, 50%);
+$light-blue: hsl(170, 37%, 82%);
+
 img{
     width: 130px;
     height: auto;
@@ -39,7 +43,7 @@ h2{
 .card, .current-card, .empty-card{
   height: 230px;
   width: 150px;
-  border: 2px solid hsl(23, 81%, 50%);
+  border: 2px solid $orange;
   border-radius: 10px;
   margin: 0 2px;
   vertical-align: middle;
@@ -52,7 +56,6 @@ h2{
 .card-row{
   margin: 10px auto;
   display: inline-block;
-
 }
 
 .text-center{
@@ -63,8 +66,7 @@ h2{
   font-size: 300%;
   height: 250px;
   width: 50px;
-  /*display: inline-block;*/
-  color: hsl(23, 81%, 50%);
+  color: $orange;
 }
 
 p{
@@ -72,16 +74,16 @@ p{
 }
 
 .btn-default{
-  background-color: hsl(23, 81%, 50%);
-  border-color: hsl(23, 81%, 50%);
-  color: hsl(170, 37%, 82%);
+  background-color: $orange;
+  border-color: $orange;
+  color: $light-blue;
   margin-bottom: 170px;
 }
 
 .btn-default:hover, .btn-default:active, .btn-default:focus{
   background-color: hsl(23, 97%, 53%);
   border-color: hsl(23, 97%, 53%);
-  color: hsl(170, 37%, 82%);
+  color: $light-blue;
 }
 
 h2 > .correct{
@@ -105,5 +107,5 @@ right-arrow{
 
 body{
   background-color: hsl(185, 54%, 20%);
-  color: hsl(170, 37%, 82%);
+  color: $light-blue;
 }
