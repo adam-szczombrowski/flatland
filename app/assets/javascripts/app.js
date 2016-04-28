@@ -1,5 +1,5 @@
 (function(){
-  var app = angular.module('timeline',['templates','ngRoute', 'timelineServices', 'timelineDirectives']);
+  var app = angular.module('timeline',['templates','ngRoute','ngResource', 'timelineServices', 'timelineDirectives']);
 
   app.config(['$routeProvider', Router]);
 
@@ -17,15 +17,16 @@
 
   app.controller('GameController', ['$window','$scope', 'Cards', function($window, $scope, Cards){
     function init(){
-      $scope.gameCards = Cards.cards;
       $scope.cards = [];
-      $scope.cards.push({});
-      $scope.cards.push(getNewCard($scope.gameCards));
-      $scope.cards.push({year: $scope.cards[1].year + 1});
-      $scope.cards[0].year = $scope.cards[1].year - 1;
-      $scope.currentCard = getNewCard($scope.gameCards);
       $scope.visibleIndex = 0;
       $scope.points = 0;
+      $scope.gameCards = Cards.query(function(){
+        $scope.cards.push({});
+        $scope.cards.push(getNewCard($scope.gameCards));
+        $scope.cards.push({year: $scope.cards[1].year + 1});
+        $scope.cards[0].year = $scope.cards[1].year - 1;
+        $scope.currentCard = getNewCard($scope.gameCards);
+      });
     }
 
     init();
