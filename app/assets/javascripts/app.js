@@ -21,6 +21,7 @@
       $scope.visibleIndex = 0;
       $scope.points = 0;
       $scope.gameCards = Cards.query(function(){
+        console.log($scope.gameCards);
         $scope.cards.push({});
         $scope.cards.push(getNewCard($scope.gameCards));
         $scope.cards.push({year: $scope.cards[1].year + 1});

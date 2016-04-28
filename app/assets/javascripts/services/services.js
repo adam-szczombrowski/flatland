@@ -82,5 +82,5 @@ var timelineServices = angular.module('timelineServices', []);
 // ];
 
 timelineServices.factory('Cards', ['$resource', function($resource){
-  return $resource('/cards_controller/index.json');
+  return $resource('/cards.json');
 }]);
